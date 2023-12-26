@@ -51,6 +51,7 @@ public class StaticMeshExLibrary : ModuleRules
 				"MaterialUtilities",
 				"Landscape",
 				"RHI",
+				"HierarchicalLODUtilities",
 			}
 			);
 		

@@ -19,7 +19,7 @@ struct FStaticMeshLODResources;
 struct FKAggregateGeom;
 class UInstancedStaticMeshComponent;
 
-class FMyMeshMergeHelpers
+class  FMyMeshMergeHelpers
 {
 public:
 	/** Extracting section info data from static, skeletal mesh (components) */
@@ -31,8 +31,8 @@ public:
 	static void ExpandInstances(const UInstancedStaticMeshComponent* InInstancedStaticMeshComponent, FMeshDescription& InOutRawMesh);
 
 	/** Extracting mesh data in FMeshDescription form from static, skeletal mesh (components) */
-	static void RetrieveMesh(const UStaticMeshComponent* StaticMeshComponent, int32 LODIndex, FMeshDescription& OutMeshDescription, bool bPropagateVertexColours);
-	static void RetrieveMesh(const USkeletalMeshComponent* SkeletalMeshComponent, int32 LODIndex, FMeshDescription& OutMeshDescription, bool bPropagateVertexColours);
+	static void RetrieveMesh(const UStaticMeshComponent* StaticMeshComponent, int32 LODIndex, FMeshDescription& OutMeshDescription, bool bPropagateVertexColours, bool bApplyComponentTransform = true);
+	static void RetrieveMesh(const USkeletalMeshComponent* SkeletalMeshComponent, int32 LODIndex, FMeshDescription& OutMeshDescription, bool bPropagateVertexColours, bool bApplyComponentTransform = false);
 	static void RetrieveMesh(const UStaticMesh* StaticMesh, int32 LODIndex, FMeshDescription& OutMeshDescription);
 	
 	/** Exports static mesh LOD render data to a RawMesh */
